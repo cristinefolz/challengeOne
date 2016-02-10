@@ -30,11 +30,17 @@ $('#submit-button').on('click',toToDo);
 
 
 
-// function youdidit(){
-// 	window.alert("Good work! You finished");
-// }
+function findCheck(){
+	var box = $(this);
+	if( box.is(':checked')){
+		alert("Good work! You finished");
+	} else {
+		alert("Work harder");
+	}
+};
 
-// $('.unique-check').on($('.unique-check').checked = true), youdidit);
+$('.unique-check').on('click',findCheck);
+
 
 
 
