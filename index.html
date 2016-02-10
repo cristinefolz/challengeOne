@@ -47,6 +47,11 @@
 											<td>2/12/16
 											</td>
 											<td>
+												<div class="checkbox">
+												    <label>
+												      <input type="checkbox"> 
+												    </label>
+												  </div>
 											</td>
 										</tr>
 										<tr>
@@ -55,11 +60,13 @@
 											<td>2/12/16
 											</td>
 											<td>
+												<div class="checkbox">
+												    <label>
+												      <input type="checkbox"> 
+												    </label>
+												  </div>
 											</td>
 										</tr>
-
-
-
 									</tbody>
 								</table>
 							</div>
@@ -72,26 +79,17 @@
 		<section id=2>
 			<div class="container">
 				<div class="row">	
-					<form>
+					<form class="form-inline">
 					  <div class="form-group">
-					    <label for="exampleInputEmail1">Email address</label>
-					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-					  </div>
-					  <div class="form-group">
-					    <label for="exampleInputPassword1">Password</label>
-					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					    <label class="sr-only" for="exampleInputEmail3">Task Name</label>
+					    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Task Name">
 					  </div>
 					  <div class="form-group">
-					    <label for="exampleInputFile">File input</label>
-					    <input type="file" id="exampleInputFile">
-					    <p class="help-block">Example block-level help text here.</p>
+					    <label class="sr-only" for="exampleInputPassword3">Due Date</label>
+					    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Due Date">
 					  </div>
-					  <div class="checkbox">
-					    <label>
-					      <input type="checkbox"> Check me out
-					    </label>
-					  </div>
-					  <button type="submit" class="btn btn-default">Submit</button>
+					  
+					  <button type="submit" class="btn btn-primary">Submit</button>
 					</form>
 					
 				</div>			
