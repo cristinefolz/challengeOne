@@ -11,14 +11,12 @@ toDos.forEach(function(todo){
 					<td>' + todo.date + '\
 					</td>\
 					<td>\
-						<div class="checkbox">\
-							<label>\
-								 <input class="unique-check" type="checkbox"> \
-							</label>\
-						</div>\
+						<button type="button" class="btn btn-primary deleteToDo">Done</button>\
 					</td>\
 				</tr>');
 })
+
+
 
 function toToDo(event){
 	event.preventDefault();
@@ -37,34 +35,42 @@ function toToDo(event){
 						<td>' + dueDate + '\
 						</td>\
 						<td>\
-							<div class="checkbox">\
-								<label>\
-									 <input class= "unique-check" type="checkbox"> \
-								</label>\
-							</div>\
+							<button type="button" class="btn btn-primary deleteToDo">Done</button>\
 						</td>\
 					</tr>');
-
-		console.log("hey, it worked", taskName, dueDate);
+		
+		$('.deleteToDo').on('click', deleteToDo);
 	}	
 	return false;
 
 }
 
-$('#submit-button').on('click',toToDo);
+var deleteToDo = function(event) {
+	event.preventDefault();
+	$(event.target).closest('tr').remove();
+}
 
 
 
-function findCheck(){
-	var box = $(this);
-	if( box.is(':checked')){
-		alert("Good work! You finished");
-	} else {
-		alert("Work harder");
-	}
-};
 
-$('.unique-check').on('click',findCheck);
+$('#submit-button').on('click', toToDo);
+$('.deleteToDo').on('click', deleteToDo);
+
+
+
+
+
+
+// function findCheck(){
+// 	var box = $(this);
+// 	if( box.is(':checked')){
+// 		alert("Good work! You finished");
+// 	} else {
+// 		alert("Work harder");
+// 	}
+// };
+
+// $('.unique-check').on('click',findCheck);
 
 
 
