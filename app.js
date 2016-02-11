@@ -13,13 +13,12 @@ toDos.forEach(function(todo){
 					<td>\
 						<div class="checkbox">\
 							<label>\
-								 <input class= "unique-check" type="checkbox"> \
+								 <input class="unique-check" type="checkbox"> \
 							</label>\
 						</div>\
 					</td>\
 				</tr>');
 })
-
 
 function toToDo(event){
 	event.preventDefault();
