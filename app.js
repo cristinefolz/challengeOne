@@ -4,11 +4,11 @@ var $list = $('#toDoTable');
 
 var toDos = [taskOne, taskTwo];
 
-for(var i = 0; i < toDos.length; i++){
+toDos.forEach(function(todo){
 	$list.append('<tr>\
-					<td>' + toDos[i].name + '\
+					<td>' + todo.name + '\
 					</td>\
-					<td>' + toDos[i].date + '\
+					<td>' + todo.date + '\
 					</td>\
 					<td>\
 						<div class="checkbox">\
@@ -18,7 +18,7 @@ for(var i = 0; i < toDos.length; i++){
 						</div>\
 					</td>\
 				</tr>');
-}
+})
 
 
 function toToDo(event){
