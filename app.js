@@ -3,8 +3,8 @@ function toToDo(event){
 	var $element = $(event.target);
 	var $form = $element.closest('form');
 	var $inputs = $form.find('input')
-	var taskName = $inputs.first().val();
-	var dueDate = $inputs.eq(1).val();
+	var taskName = $("#taskName").val();
+	var dueDate = $("#dueDate").val();
 	var $list = $('#toDoTable');
 	$list.append('<tr>\
 					<td>' + taskName + '\
