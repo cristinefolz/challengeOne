@@ -41,11 +41,10 @@ function addClient(event){
 				</tr>'));
     }
 
+    $('#firstName').val('');
+	$('#lastName').val('');
+	$('#phoneNumber').val('');
+
 }
-
-// $('firstName').val('');
-// $('lastName').val('');
-// $('phoneNumber').val('');
-
 
 $('#submit-button').on('click', addClient);
