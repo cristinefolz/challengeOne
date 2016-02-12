@@ -27,7 +27,7 @@ function toToDo(event){
 	var dueDate = $("#dueDate").val();
 	
 
-	if(taskName && dueDate) {
+	if(taskName && dueDate) {       // to prevent having empty fields being submitted (testing truthiness of variables)
 
 		$list.append('<tr>\
 						<td>' + taskName + '\
@@ -41,7 +41,9 @@ function toToDo(event){
 		
 		$('.deleteToDo').on('click', deleteToDo);
 	}	
-	return false;
+
+	$('taskName').val('');
+	$('dueDate').val('');
 
 }
 
