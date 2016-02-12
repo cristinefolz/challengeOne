@@ -1,38 +1,8 @@
-var 
+var personOne = {firstName: "john", lastName: "johnson", phoneNumber: '404-333-3232'};
+var personTwo = {firstName: "sally", lastName: "johnson", phoneNumber: '404-334-2323'};
+var personThree = {firstName: "sue", lastName: "johnson", phoneNumber: '404-335-3223'};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function youdidit(){
-	
-// 	if($('.unique-check').checked = true)	{
-// 		window.alert("Good work! You finished");
-// 	} else if ($('.unique-check').checked = false){
-// 		window.alert("Well get to work!");
-// 	} else {
-// 		return false;
-// 	}
-// }
-
-// $('.unique-check').on('click', youdidit);
-
-
-
-
+var people = [personOne, personTwo, personThree];
 
 
 
