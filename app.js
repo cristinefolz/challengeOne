@@ -19,3 +19,33 @@ people.forEach(function(person){
 })
 
 
+function addClient(event){
+    event.preventDefault();
+    var $element = $(event.target);
+    var $form = $element.closest('form');
+    var $inputs = $form.find('input');
+    var firstName = $("#firstName").val();
+    var lastName = $("#lastName").val();
+    var phoneNumber = $("#phoneNumber").val();
+
+
+    if(firstName && lastName && phoneNumber) {
+
+    	$clientTable.append(('<tr>\
+					<td>' + firstName + '\
+					</td>\
+					<td>' + lastName + '\
+					</td>\
+					<td>' + phoneNumber + '\
+					</td>\
+				</tr>'));
+    }
+
+}
+
+// $('firstName').val('');
+// $('lastName').val('');
+// $('phoneNumber').val('');
+
+
+$('#submit-button').on('click', addClient);
